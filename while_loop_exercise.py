@@ -1,3 +1,5 @@
+import random
+
 print('Guessing game')
 # Guess the correct number in 3 guesses. If you don’t get it right after 3 guesses you lose the game.
 # Give user input box: 1. To capture guesses,
@@ -13,3 +15,19 @@ print('Guessing game')
 #  ->
 #3. How long should we repeat?
 #  ->
+
+guesses = 3
+user_guess = input("Please enter your guess between 1-10: ")
+random_number = random.randrange(1, 10)
+i = 0
+
+while i < guesses:
+    i+=1
+    if int(user_guess) == random_number:
+        print('You guessed right!')
+        break
+    else:
+        print('You guessed wrong!')
+        print(f'You have {guesses-(i)} guesses left!')
+        if i != guesses:
+            user_guess = input("Try again: ")
