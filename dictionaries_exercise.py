@@ -10,6 +10,27 @@
 # as in all games there is a special way to do this that actually makes money and solves the problem...can you find 'them'? Do you know why? May require knowledge of actual python 'lore'
 
 #create stores
-freelancers = {'name':'freelancing Shop','brian': 70, 'black knight':20, 'biccus diccus':100, 'grim reaper':500, 'minstrel':-15}
+freelancers = {'name':'Freelancing Shop','brian': 70, 'black knight':20, 'biccus diccus':100, 'grim reaper':500, 'minstrel':-15}
 antiques = {'name':'Antique Shop','french castle':400, 'wooden grail':3, 'scythe':150, 'catapult':75, 'german joke':5}
 pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
+
+cart = {}
+print(f'Welcome to the \'{freelancers["name"]}\'')
+print('\nWhat would you like to buy: ')
+freelancers.pop('name')
+for items, price in freelancers.items():
+    print(f'{items}: {price} gold')
+
+user_input = input('What would you like to purchase?')
+
+while True:
+    if user_input in freelancers:
+        print('Item purchased')
+        price = freelancers.pop(user_input)
+        cart.update({user_input: price})
+        break
+    else:
+        print('That person doesn\'t exist')
+        user_input = input('Try again!! What would you like to purchase?')
+
+print(cart)
