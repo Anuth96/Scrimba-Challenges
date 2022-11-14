@@ -15,22 +15,68 @@ antiques = {'name':'Antique Shop','french castle':400, 'wooden grail':3, 'scythe
 pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
 
 cart = {}
-print(f'Welcome to the \'{freelancers["name"]}\'')
-print('\nWhat would you like to buy: ')
+purse={'gold': 1000}
+#Freelancers store
+print(f'Welcome to the \'{freelancers["name"]}\'\n')
 freelancers.pop('name')
 for items, price in freelancers.items():
     print(f'{items}: {price} gold')
 
-user_input = input('What would you like to purchase?')
+user_input = input('Which Ally would you like to purchase?\nOr type \'exit\' to leave the store!').strip()
 
 while True:
-    if user_input in freelancers:
-        print('Item purchased')
+    if user_input.lower() == 'exit':
+        print('Thanks for stopping by!\n')
+        break
+    elif user_input in freelancers:
+        print(f'{user_input.title()} has been purchased as an Ally!\n')
         price = freelancers.pop(user_input)
         cart.update({user_input: price})
         break
     else:
-        print('That person doesn\'t exist')
-        user_input = input('Try again!! What would you like to purchase?')
+        print('That Ally doesn\'t exist in the shop!!')
+        user_input = input('Try again!! Which Ally you like to purchase?')
 
-print(cart)
+#Antique store
+print(f'Welcome to the \'{antiques["name"]}\'\n')
+antiques.pop('name')
+for items, price in antiques.items():
+    print(f'{items}: {price} gold')
+
+user_input = input('What Item you like to purchase?\nOr type \'exit\' to leave the store!').strip()
+
+while True:
+    if user_input.lower() == 'exit':
+        print('Thanks for stopping by!\n')
+        break
+    elif user_input in antiques:
+        print(f'{user_input.title()} has been purchased!\n')
+        price = antiques.pop(user_input)
+        cart.update({user_input: price})
+        break
+    else:
+        print('That Item doesn\'t exist')
+        user_input = input('Try again!! What Item would you like to purchase?')
+
+#Pet shop
+print(f'Welcome to the \'{pet_shop["name"]}\'\n')
+pet_shop.pop('name')
+for items, price in pet_shop.items():
+    print(f'{items}: {price} gold')
+
+user_input = input('Which Pet you like to purchase?\nOr type \'exit\' to leave the store!').strip()
+
+while True:
+    if user_input.lower() == 'exit':
+        print('Thanks for stopping by!\n')
+        break
+    elif user_input in pet_shop:
+        print(f'{user_input.title()} has been purchased as a Pet!\n')
+        price = pet_shop.pop(user_input)
+        cart.update({user_input: price})
+        break
+    else:
+        print('That Pet doesn\'t exist')
+        user_input = input('Try again!! Which Pet would you like to purchase?')
+
+#total after purchases using purse
