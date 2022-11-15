@@ -29,9 +29,13 @@ while True:
         print('Thanks for stopping by!\n')
         break
     elif user_input in freelancers:
-        print(f'{user_input.title()} has been purchased as an Ally!\n')
         price = freelancers.pop(user_input)
         cart.update({user_input: price})
+        print(f'{user_input.title()} has been purchased as an Ally for {price} gold!')
+#update purse with purchase
+        gold_remaining = purse['gold'] - price
+        purse.update({'gold': gold_remaining})
+        print(f'You have {gold_remaining} gold remianing!\n')
         break
     else:
         print('That Ally doesn\'t exist in the shop!!')
@@ -50,9 +54,13 @@ while True:
         print('Thanks for stopping by!\n')
         break
     elif user_input in antiques:
-        print(f'{user_input.title()} has been purchased!\n')
         price = antiques.pop(user_input)
         cart.update({user_input: price})
+        print(f'{user_input.title()} has been purchased for {price} gold!')
+#update purse with purchase
+        gold_remaining = purse['gold'] - price
+        purse.update({'gold': gold_remaining})
+        print(f'You have {gold_remaining} gold remianing!\n')
         break
     else:
         print('That Item doesn\'t exist')
@@ -71,9 +79,13 @@ while True:
         print('Thanks for stopping by!\n')
         break
     elif user_input in pet_shop:
-        print(f'{user_input.title()} has been purchased as a Pet!\n')
         price = pet_shop.pop(user_input)
         cart.update({user_input: price})
+        print(f'{user_input.title()} has been purchased as a Pet for {price} gold!')
+#update purse with purchase
+        gold_remaining = purse['gold'] - price
+        purse.update({'gold': gold_remaining})
+        print(f'You have {gold_remaining} gold remianing!\n')
         break
     else:
         print('That Pet doesn\'t exist')
