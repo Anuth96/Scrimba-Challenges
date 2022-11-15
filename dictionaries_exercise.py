@@ -91,4 +91,7 @@ while True:
         print('That Pet doesn\'t exist')
         user_input = input('Try again!! Which Pet would you like to purchase?')
 
-#total after purchases using purse
+#Listing inventory after purchases
+print('Your inventory: ')
+for keys in cart:
+    print(keys)
