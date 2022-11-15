@@ -35,7 +35,12 @@ while True:
 #update purse with purchase
         gold_remaining = purse['gold'] - price
         purse.update({'gold': gold_remaining})
-        print(f'You have {gold_remaining} gold remianing!\n')
+        print(f'You have {gold_remaining} gold remaining!\n')
+#showing inventory after each purchase
+        print('Your inventory: ')
+        for keys in cart:
+            print(keys)
+        print('\n')
         break
     else:
         print('That Ally doesn\'t exist in the shop!!')
@@ -60,7 +65,12 @@ while True:
 #update purse with purchase
         gold_remaining = purse['gold'] - price
         purse.update({'gold': gold_remaining})
-        print(f'You have {gold_remaining} gold remianing!\n')
+        print(f'You have {gold_remaining} gold remaining!\n')
+#showing inventory after each purchase
+        print('Your inventory: ')
+        for keys in cart:
+            print(keys)
+        print('\n')
         break
     else:
         print('That Item doesn\'t exist')
@@ -85,13 +95,13 @@ while True:
 #update purse with purchase
         gold_remaining = purse['gold'] - price
         purse.update({'gold': gold_remaining})
-        print(f'You have {gold_remaining} gold remianing!\n')
+        print(f'You have {gold_remaining} gold remaining!\n')
+#showing inventory after each purchase
+        print('Your inventory: ')
+        for keys in cart:
+            print(keys)
+        print('\n')
         break
     else:
         print('That Pet doesn\'t exist')
         user_input = input('Try again!! Which Pet would you like to purchase?')
-
-#Listing inventory after purchases
-print('Your inventory: ')
-for keys in cart:
-    print(keys)
