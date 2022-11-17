@@ -1,7 +1,7 @@
 print('Lambdas Exercise')
 
 def f(x): return x + 5
-#f = ...#insert equivalent lambda here
+f =  lambda x : x + 5 #insert equivalent lambda here
 print(f(2))
 
 
