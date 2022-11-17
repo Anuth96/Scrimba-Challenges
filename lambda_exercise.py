@@ -66,14 +66,13 @@ print(join_list_no_duplicates1(list_a,list_b))
 
 
 #Complete the function so it returns a function
-#def create_quad_func(a,b,c):
-#    '''return function f(x) = ax^2 + bx + c'''
-#    return lambda x:
-#f = create_quad_func(2,4,6)
-#g =
-#print(f(2))
-#print(g(2))
-
+def create_quad_func(a,b,c):
+    '''return function f(x) = ax^2 + bx + c'''
+    return lambda x: a*x**2 + b*x + c
+f = create_quad_func(2,4,6)
+g = create_quad_func(1,2,3)
+print(f(2))
+print(g(2))
 
 
 
