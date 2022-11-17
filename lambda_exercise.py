@@ -86,13 +86,10 @@ print(g(2))
 
 
 
-
-
-#signups = ['MPF104', 'MPF20', 'MPF2', 'MPF17', 'MPF3', 'MPF45']
-#print(sorted(signups)) # Lexicographic sort
+signups = ['MPF104', 'MPF20', 'MPF2', 'MPF17', 'MPF3', 'MPF45']
+print(sorted(signups)) # Lexicographic sort
 #write sorting by integer
-#print(sorted(...)) # Integer sort
-
+print(sorted(signups,key = lambda id:int(id[3:])))
 
 
 
