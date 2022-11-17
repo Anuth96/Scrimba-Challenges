@@ -42,13 +42,13 @@ print(strip_spaces1('Monty Pythons Flying Circus'))
 
 
 
-def join_list_no_duplicates(list_a,list_b):
-   return list(set(list_a + list_b))
+# def join_list_no_duplicates(list_a,list_b):
+#    return list(set(list_a + list_b))
 list_a = [1,2,3,4]
 list_b = [3,4,5,6,7]
 #write lambda below
-#join_list_no_duplicates = ...
-#print(join_list_no_duplicates(list_a,list_b))
+join_list_no_duplicates1 = lambda list_a,list_b : list(set(list_a + list_b))
+print(join_list_no_duplicates1(list_a,list_b))
 
 
 
