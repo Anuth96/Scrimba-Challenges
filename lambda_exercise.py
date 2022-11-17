@@ -1,6 +1,6 @@
 print('Lambdas Exercise')
 
-def f(x): return x + 5
+# def f(x): return x + 5
 f =  lambda x : x + 5 #insert equivalent lambda here
 print(f(2))
 
@@ -19,11 +19,11 @@ print(f(2))
 
 
 
-def strip_spaces(str):
-   return ''.join(str.split(' '))
+# def strip_spaces(str):
+#    return ''.join(str.split(' '))
 #write equivalent lambda and insert Lambda here
-#strip_spaces1 = ...
-#print(strip_spaces('Monty Pythons Flying Circus'))
+strip_spaces1 = lambda str : ''.join(str.split(' '))
+print(strip_spaces1('Monty Pythons Flying Circus'))
 
 
 
