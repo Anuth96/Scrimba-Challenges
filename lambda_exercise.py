@@ -120,5 +120,6 @@ player_list = [Eric, John, Terry]
 
 
 #Exercise: Sort this by score using lambda!
+player_list.sort(key = lambda player:player.score, reverse = True)
 #write code here
-#print([player.name for player in player_list])
+print([player.name for player in player_list])
